@@ -1,68 +1,45 @@
-# Personal Finance Tracker
+# Programming Crash Course
 
-A command-line personal finance tracker, built over 7 days as a hands-on way to learn Python and core programming fundamentals. Each day adds a new concept — the project grows from a simple script into a tested, persistent, object-oriented application.
+Layaaam knows programming. This is his way of returning to basics in order to relearn it, with hopes of mastering it, for his goal of becoming a Software Engineer in the near future.
 
-## What it does
+This repository documents a 7-day, hands-on relearning of core programming fundamentals using Python — one concept per day, applied directly to a real project rather than isolated exercises.
 
-Tracks income and expenses from the command line: add transactions, categorize them, view your balance, and see spending broken down by category. Data is saved to disk so it persists between runs.
-
-## Tech Stack
-
-- **Python 3**
-- **JSON** for data persistence
-- **unittest / pytest** for testing
-- *(optional)* **Flask** for a minimal web interface
-
-## Getting Started
-
-```bash
-git clone <your-repo-url>
-cd finance-tracker
-python3 main.py
-```
-
-No external dependencies required for the core CLI app (standard library only). If you build the optional Flask stretch goal:
-
-```bash
-pip install flask
-python3 app.py
-```
-
-## Project Structure
+## Repository Structure
 
 ```
-finance-tracker/
-├── main.py           # entry point / menu loop
-├── helpers.py         # standalone helper functions
-├── tracker.py          # FinanceTracker and Transaction classes
-├── test_tracker.py    # unit tests
-├── data.json           # saved transactions (generated at runtime)
-├── errors.log          # error log (generated at runtime)
-└── LEARNING_LOG.md     # daily notes on what was learned and why
+programming-crash-course/
+├── README.md              # you are here
+├── LEARNING_LOG.md         # daily notes on what was learned and why
+└── finance-tracker/          # the project — see its own README for full details
+    ├── README.md
+    ├── main.py
+    ├── helpers.py
+    ├── tracker.py
+    ├── test_tracker.py
+    ├── data.json
+    └── .gitignore
 ```
 
-## Build Log
+All the actual project code lives inside the **`finance-tracker/`** folder. Its own `README.md` covers setup instructions, tech stack, and a day-by-day build log for that project specifically.
 
-| Day | Concepts | What Was Added |
-|-----|----------|-----------------|
-| 1 | Variables, types, I/O, operators | Basic transaction entry + balance printout |
-| 2 | Control flow (`if`/`while`/`for`) | Menu-driven loop with input validation |
-| 3 | Functions & modules | Refactored logic into reusable functions across files |
-| 4 | Data structures | Transactions stored as list of dicts, list comprehensions for totals |
-| 5 | File I/O & error handling | Persisted data to `data.json`, wrapped risky code in `try`/`except` |
-| 6 | Object-oriented programming | Refactored into `Transaction` and `FinanceTracker` classes |
-| 7 | Testing & polish | Added unit tests, docs, *(optional)* Flask web wrapper |
+## The Curriculum
 
-## Running Tests
+| Day | Focus |
+|-----|-------|
+| 1 | Variables, types, I/O, operators |
+| 2 | Control flow (`if`/`while`/`for`) |
+| 3 | Functions & modules |
+| 4 | Data structures (lists, dicts, sets, comprehensions) |
+| 5 | File I/O & error handling |
+| 6 | Object-oriented programming |
+| 7 | Testing, documentation, and polish |
 
-```bash
-python3 -m pytest test_tracker.py
-```
+Each day's concept is committed separately, so the git history itself is a record of progress — see the commit log or `finance-tracker/README.md` for the detailed build log.
 
-## What I Learned
+## Why this exists
 
-This project was built as part of a 7-day fundamentals bootcamp, one concept per day, applied directly to a real evolving codebase rather than isolated exercises. See `LEARNING_LOG.md` for daily notes on what was learned and why each concept mattered.
+Rather than working through disconnected tutorials, this crash course is built around one evolving project. Each day's new concept gets applied directly to that project, so the "why" behind each fundamental (functions, error handling, classes, etc.) is felt in context, not just memorized.
 
-## License
+## Goal
 
-MIT — free to use, copy, and adapt.
+Rebuild fluency in programming fundamentals in one week, as a foundation toward becoming a Software Engineer.
